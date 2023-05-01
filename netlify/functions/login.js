@@ -24,9 +24,8 @@ var generateRandomString = function (length) {
   return text;
 };
 
-var router = express();
-var app = express.Router()
-router.use('/.netlify/functions/login', app)
+var app = express();
+
 app.get('/auth/login', (req, res) => {
 
   var scope = "streaming user-read-email user-read-private"
